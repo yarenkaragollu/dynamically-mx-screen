@@ -1,0 +1,500 @@
+[
+  {
+    "name": "AddressType2Code",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": null,
+      "enumerations": [
+        {
+          "value": "ADDR",
+          "documentationName": "",
+          "documentationDefinition": ""
+        },
+        {
+          "value": "PBOX",
+          "documentationName": "",
+          "documentationDefinition": ""
+        },
+        {
+          "value": "HOME",
+          "documentationName": "",
+          "documentationDefinition": ""
+        },
+        {
+          "value": "BIZZ",
+          "documentationName": "",
+          "documentationDefinition": ""
+        },
+        {
+          "value": "MLTO",
+          "documentationName": "",
+          "documentationDefinition": ""
+        },
+        {
+          "value": "DLVY",
+          "documentationName": "",
+          "documentationDefinition": ""
+        }
+      ]
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "AnyBICDec2014Identifier",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "pattern": "[A-Z0-9]{4,4}[A-Z]{2,2}[A-Z0-9]{2,2}([A-Z0-9]{3,3}){0,1}"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "BICFIDec2014Identifier",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "pattern": "[A-Z0-9]{4,4}[A-Z]{2,2}[A-Z0-9]{2,2}([A-Z0-9]{3,3}){0,1}"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "BusinessMessagePriorityCode",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": null,
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "CopyDuplicate1Code",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": null,
+      "enumerations": [
+        {
+          "value": "CODU",
+          "documentationName": "",
+          "documentationDefinition": ""
+        },
+        {
+          "value": "COPY",
+          "documentationName": "",
+          "documentationDefinition": ""
+        },
+        {
+          "value": "DUPL",
+          "documentationName": "",
+          "documentationDefinition": ""
+        }
+      ]
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "CountryCode",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "pattern": "[A-Z]{2,2}"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "Exact4AlphaNumericText",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "pattern": "[a-zA-Z0-9]{4}"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "ExternalClearingSystemIdentification1Code",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "5"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "ExternalFinancialInstitutionIdentification1Code",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "4"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "ExternalOrganisationIdentification1Code",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "4"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "ExternalPersonIdentification1Code",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "4"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "ISODate",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:date",
+      "facets": null,
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "ISODateTime",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:dateTime",
+      "facets": null,
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "LEIIdentifier",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "pattern": "[A-Z0-9]{18,18}[0-9]{2,2}"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "Max128Text",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "128"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "Max140Text",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "140"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "Max16Text",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "16"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "Max2048Text",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "2048"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "Max350Text",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "350"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "Max35Text",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "35"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "Max4Text",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "4"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "Max70Text",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "70"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "NamePrefix2Code",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": null,
+      "enumerations": [
+        {
+          "value": "DOCT",
+          "documentationName": "",
+          "documentationDefinition": ""
+        },
+        {
+          "value": "MADM",
+          "documentationName": "",
+          "documentationDefinition": ""
+        },
+        {
+          "value": "MISS",
+          "documentationName": "",
+          "documentationDefinition": ""
+        },
+        {
+          "value": "MIST",
+          "documentationName": "",
+          "documentationDefinition": ""
+        },
+        {
+          "value": "MIKS",
+          "documentationName": "",
+          "documentationDefinition": ""
+        }
+      ]
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "PhoneNumber",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "pattern": "\\+[0-9]{1,3}-[0-9()+\\-]{1,30}"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "PreferredContactMethod1Code",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": null,
+      "enumerations": [
+        {
+          "value": "LETT",
+          "documentationName": "",
+          "documentationDefinition": ""
+        },
+        {
+          "value": "MAIL",
+          "documentationName": "",
+          "documentationDefinition": ""
+        },
+        {
+          "value": "PHON",
+          "documentationName": "",
+          "documentationDefinition": ""
+        },
+        {
+          "value": "FAXX",
+          "documentationName": "",
+          "documentationDefinition": ""
+        },
+        {
+          "value": "CELL",
+          "documentationName": "",
+          "documentationDefinition": ""
+        }
+      ]
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "UnicodeChartsCode",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": null,
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "YesNoIndicator",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:boolean",
+      "facets": null,
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  }
+]

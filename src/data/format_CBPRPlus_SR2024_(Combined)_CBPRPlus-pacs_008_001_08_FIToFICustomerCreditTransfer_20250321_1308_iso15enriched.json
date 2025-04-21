@@ -1,0 +1,1259 @@
+[
+  {
+    "name": "ActiveCurrencyCode",
+    "documentationName": "ActiveCurrencyCode",
+    "documentationDefinition": "A code allocated to a currency by a Maintenance Agency under an international identification scheme as described in the latest edition of the international standard ISO 4217 \"Codes for the representation of currencies and funds\".",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "pattern": "[A-Z]{3,3}"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "ActiveOrHistoricCurrencyAndAmount_SimpleType",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:decimal",
+      "facets": {
+        "minInclusive": "0",
+        "totalDigits": "18",
+        "fractionDigits": "5"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "ActiveOrHistoricCurrencyCode",
+    "documentationName": "ActiveOrHistoricCurrencyCode",
+    "documentationDefinition": "A code allocated to a currency by a Maintenance Agency under an international identification scheme, as described in the latest edition of the international standard ISO 4217 \"Codes for the representation of currencies and funds\".",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "pattern": "[A-Z]{3,3}"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "AnyBICDec2014Identifier",
+    "documentationName": "AnyBICDec2014Identifier",
+    "documentationDefinition": "Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362: 2014 - \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "pattern": "[A-Z0-9]{4,4}[A-Z]{2,2}[A-Z0-9]{2,2}([A-Z0-9]{3,3}){0,1}"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "BICFIDec2014Identifier",
+    "documentationName": "BICFIDec2014Identifier",
+    "documentationDefinition": "Code allocated to a financial institution by the ISO 9362 Registration Authority as described in ISO 9362: 2014 - \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "pattern": "[A-Z0-9]{4,4}[A-Z]{2,2}[A-Z0-9]{2,2}([A-Z0-9]{3,3}){0,1}"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "BaseOneRate",
+    "documentationName": "BaseOneRate",
+    "documentationDefinition": "Rate expressed as a decimal, for example, 0.7 is 7/10 and 70%.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:decimal",
+      "facets": {
+        "totalDigits": "11",
+        "fractionDigits": "10"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "CBPR_Amount__1_SimpleType",
+    "documentationName": "",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:decimal",
+      "facets": {
+        "minInclusive": "0",
+        "totalDigits": "14",
+        "fractionDigits": "5"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "CBPR_DateTime",
+    "documentationName": "CBPR_DateTime",
+    "documentationDefinition": "A particular point in the progression of time defined by a mandatory date and a mandatory time component, expressed in local time with UTC offset format (YYYY-MM-DDThh:mm:ss.sss+/-hh:mm). \r\n\r\nThis representation is defined in \"XML Schema Part 2: Datatypes Second Edition - W3C Recommendation 28 October 2004\" which is aligned with ISO 8601.\r\nNote on the time format:\r\n1) beginning / end of calendar day\r\n00:00:00 = the beginning of a calendar day\r\n24:00:00 = the end of a calendar day\r\n2) fractions of second in time format\r\nDecimal fractions of seconds may be included. In this case, the involved parties shall agree on the maximum number of digits that are allowed.\r\n\r\nExample: 2020-07-16T19:20:30.45+01:00",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:dateTime",
+      "facets": {
+        "pattern": ".*(\\+|-)((0[0-9])|(1[0-3])):[0-5][0-9]"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "CBPR_RestrictedFINXMax10Text",
+    "documentationName": "CBPR_RestrictedFINXMax10Text",
+    "documentationDefinition": "Specifies a character string with a minimum length of 1, and a maximum length of 10 characters, and limited to character set X, that is, 0-9 a-z A-Z / - ? : ( ) . , ' + .",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "10",
+        "pattern": "[0-9a-zA-Z/\\-\\?:\\(\\)\\.,'\\+ ]+"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "CBPR_RestrictedFINXMax140Text",
+    "documentationName": "CBPR_RestrictedFINXMax140Text",
+    "documentationDefinition": "Specifies a character string with a minimum length of 1, and a maximum length of 140 characters, and limited to character set X, that is, 0-9 a-z A-Z / - ? : ( ) . , ' + .",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "140",
+        "pattern": "[0-9a-zA-Z/\\-\\?:\\(\\)\\.,'\\+ ]+"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "CBPR_RestrictedFINXMax140Text_Extended",
+    "documentationName": "CBPR_RestrictedFINXMax140Text_Extended",
+    "documentationDefinition": "Specifies a character string with a minimum length of 1, and a maximum length of 140 characters, and limited to character set X, that is, 0-9 a-z A-Z / - ? : ( ) . , ' + . that is extended to support the following additional characters !#$%&*=^_`{|}~\";<>@[\\]",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "140",
+        "pattern": "[0-9a-zA-Z/\\-\\?:\\(\\)\\.,'\\+ !#$%&\\*=^_`\\{\\|\\}~\";<>@\\[\\\\\\]]+"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "CBPR_RestrictedFINXMax16Text",
+    "documentationName": "CBPR_RestrictedFINXMax16Text",
+    "documentationDefinition": "Specifies a character string with a minimum length of 1, and a maximum length of 16 characters, and limited to character set X, that is, 0-9 a-z A-Z / - ? : ( ) . , ' + .",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "16",
+        "pattern": "[0-9a-zA-Z/\\-\\?:\\(\\)\\.,'\\+ ]+"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "CBPR_RestrictedFINXMax16Text_Extended",
+    "documentationName": "CBPR_RestrictedFINXMax16Text_Extended",
+    "documentationDefinition": "Specifies a character string with a minimum length of 1, and a maximum length of 16 characters, and limited to character set X, that is, 0-9 a-z A-Z / - ? : ( ) . , ' + . that is extended to support the following additional characters !#$%&*=^_`{|}~\";<>@[\\]",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "16",
+        "pattern": "[0-9a-zA-Z/\\-\\?:\\(\\)\\.,'\\+ !#$%&\\*=^_`\\{\\|\\}~\";<>@\\[\\\\\\]]+"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "CBPR_RestrictedFINXMax2048Text_Extended",
+    "documentationName": "CBPR_RestrictedFINXMax2048Text_Extended",
+    "documentationDefinition": "Specifies a character string with a minimum length of 1, and a maximum length of 2048 characters, and limited to character set X, that is, 0-9 a-z A-Z / - ? : ( ) . , ' + . that is extended to support the following additional characters !#$%&*=^_`{|}~\";<>@[\\]",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "2048",
+        "pattern": "[0-9a-zA-Z/\\-\\?:\\(\\)\\.,'\\+ !#$%&\\*=^_`\\{\\|\\}~\";<>@\\[\\\\\\]]+"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "CBPR_RestrictedFINXMax28Text",
+    "documentationName": "CBPR_RestrictedFINXMax28Text",
+    "documentationDefinition": "Specifies a character string with a minimum length of 1, and a maximum length of 28 characters, and limited to character set X, that is, 0-9 a-z A-Z / - ? : ( ) . , ‘ + .",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "28",
+        "pattern": "[0-9a-zA-Z/\\-\\?:\\(\\)\\.,'\\+ ]+"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "CBPR_RestrictedFINXMax320Text_Extended",
+    "documentationName": "CBPR_RestrictedFINXMax320Text_Extended",
+    "documentationDefinition": "Specifies a character string with a minimum length of 1, and a maximum length of 320 characters, and limited to character set X, that is, 0-9 a-z A-Z / - ? : ( ) . , ' + . that is extended to support the following additional characters !#$%&*=^_`{|}~\";<>@[\\]",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "320",
+        "pattern": "[0-9a-zA-Z/\\-\\?:\\(\\)\\.,'\\+ !#$%&\\*=^_`\\{\\|\\}~\";<>@\\[\\\\\\]]+"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "CBPR_RestrictedFINXMax34Text",
+    "documentationName": "CBPR_RestrictedFINXMax34Text",
+    "documentationDefinition": "Specifies a character string with a minimum length of 1, and a maximum length of 34 characters, and limited to character set X, that is, 0-9 a-z A-Z / - ? : ( ) . , ' + . and disable the use of slash \"/\" at the beginning and end of line and double slash \"//\" within the line.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "34",
+        "pattern": "([0-9a-zA-Z\\-\\?:\\(\\)\\.,'\\+ ]([0-9a-zA-Z\\-\\?:\\(\\)\\.,'\\+ ]*(/[0-9a-zA-Z\\-\\?:\\(\\)\\.,'\\+ ])?)*)"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "CBPR_RestrictedFINXMax35Text",
+    "documentationName": "CBPR_RestrictedFINXMax35Text",
+    "documentationDefinition": "Specifies a character string with a minimum length of 1, and a maximum length of 35 characters, and limited to character set X, that is, 0-9 a-z A-Z / - ? : ( ) . , ‘ + .",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "35",
+        "pattern": "[0-9a-zA-Z/\\-\\?:\\(\\)\\.,'\\+ ]+"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "CBPR_RestrictedFINXMax35Text_Extended",
+    "documentationName": "CBPR_RestrictedFINXMax35Text_Extended",
+    "documentationDefinition": "Specifies a character string with a minimum length of 1, and a maximum length of 35 characters, and limited to character set X, that is, 0-9 a-z A-Z / - ? : ( ) . , ' + . that is extended to support the following additional characters !#$%&*=^_`{|}~\";<>@[\\]",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "35",
+        "pattern": "[0-9a-zA-Z/\\-\\?:\\(\\)\\.,'\\+ !#$%&\\*=^_`\\{\\|\\}~\";<>@\\[\\\\\\]]+"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "CBPR_RestrictedFINXMax4Text_Extended",
+    "documentationName": "CBPR_RestrictedFINXMax4Text_Extended",
+    "documentationDefinition": "Specifies a character string witha minimum length of 1, and a maximum length of 4 characters, and limited to character set X, that is, 0-9 a-z A-Z / - ? : ( ) . , ' + . that is extended to support the following additional characters !#$%&*=^_`{|}~\";<>@[\\]",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "4",
+        "pattern": "[0-9a-zA-Z/\\-\\?:\\(\\)\\.,'\\+ !#$%&\\*=^_`\\{\\|\\}~\";<>@\\[\\\\\\]]+"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "CBPR_RestrictedFINXMax70Text",
+    "documentationName": "CBPR_RestrictedFINXMax70Text",
+    "documentationDefinition": "Specifies a character string with a minimum length of 1, and a maximum length of 70 characters, and limited to character set X, that is, 0-9 a-z A-Z / - ? : ( ) . , ' + .",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "70",
+        "pattern": "[0-9a-zA-Z/\\-\\?:\\(\\)\\.,'\\+ ]+"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "CBPR_RestrictedFINXMax70Text_Extended",
+    "documentationName": "CBPR_RestrictedFINXMax70Text_Extended",
+    "documentationDefinition": "Specifies a character string with a minimum length of 1, and a maximum length of 70 characters, and limited to character set X, that is, 0-9 a-z A-Z / - ? : ( ) . , ' + . that is extended to support the following additional characters !#$%&*=^_`{|}~\";<>@[\\]",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "70",
+        "pattern": "[0-9a-zA-Z/\\-\\?:\\(\\)\\.,'\\+ !#$%&\\*=^_`\\{\\|\\}~\";<>@\\[\\\\\\]]+"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "CBPR_Time",
+    "documentationName": "CBPR_Time",
+    "documentationDefinition": "A particular point in the progression of time defined by a mandatory time component, expressed in local time with UTC offset format (hh:mm:ss.sss+/-hh:mm). \r\n\r\nNote on the time format:\r\n1) beginning / end of calendar day\r\n00:00:00 = the beginning of a calendar day\r\n24:00:00 = the end of a calendar day\r\n2) fractions of second in time format\r\nDecimal fractions of seconds may be included. In this case, the involved parties shall agree on the maximum number of digits that are allowed.\r\n\r\nExample: 19:20:30.45+01:00",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:time",
+      "facets": {
+        "pattern": ".*(\\+|-)((0[0-9])|(1[0-3])):[0-5][0-9]"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "ChargeBearerType1Code__1",
+    "documentationName": "ChargeBearerType1Code__1",
+    "documentationDefinition": "Specifies which party(ies) will pay charges due for processing of the instruction.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": null,
+      "enumerations": [
+        {
+          "value": "DEBT",
+          "documentationName": "BorneByDebtor",
+          "documentationDefinition": "All transaction charges are to be borne by the debtor."
+        },
+        {
+          "value": "CRED",
+          "documentationName": "BorneByCreditor",
+          "documentationDefinition": "All transaction charges are to be borne by the creditor."
+        },
+        {
+          "value": "SHAR",
+          "documentationName": "Shared",
+          "documentationDefinition": "In a credit transfer context, means that transaction charges on the sender side are to be borne by the debtor, transaction charges on the receiver side are to be borne by the creditor. In a direct debit context, means that transaction charges on the sender side are to be borne by the creditor, transaction charges on the receiver side are to be borne by the debtor."
+        }
+      ]
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "ClearingChannel2Code",
+    "documentationName": "ClearingChannel2Code",
+    "documentationDefinition": "Specifies the clearing channel for the routing of the transaction, as part of the payment type identification.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": null,
+      "enumerations": [
+        {
+          "value": "RTGS",
+          "documentationName": "RealTimeGrossSettlementSystem",
+          "documentationDefinition": "Clearing channel is a real-time gross settlement system."
+        },
+        {
+          "value": "RTNS",
+          "documentationName": "RealTimeNetSettlementSystem",
+          "documentationDefinition": "Clearing channel is a real-time net settlement system."
+        },
+        {
+          "value": "MPNS",
+          "documentationName": "MassPaymentNetSystem",
+          "documentationDefinition": "Clearing channel is a mass payment net settlement system."
+        },
+        {
+          "value": "BOOK",
+          "documentationName": "BookTransfer",
+          "documentationDefinition": "Payment through internal book transfer."
+        }
+      ]
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "CountryCode",
+    "documentationName": "CountryCode",
+    "documentationDefinition": "Code to identify a country, a dependency, or another area of particular geopolitical interest, on the basis of country names obtained from the United Nations (ISO 3166, Alpha-2 code).",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "pattern": "[A-Z]{2,2}"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "CreditDebitCode",
+    "documentationName": "CreditDebitCode",
+    "documentationDefinition": "Specifies if an operation is an increase or a decrease.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": null,
+      "enumerations": [
+        {
+          "value": "CRDT",
+          "documentationName": "Credit",
+          "documentationDefinition": "Operation is an increase."
+        },
+        {
+          "value": "DBIT",
+          "documentationName": "Debit",
+          "documentationDefinition": "Operation is a decrease."
+        }
+      ]
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "DocumentType3Code",
+    "documentationName": "DocumentType3Code",
+    "documentationDefinition": "Specifies a type of financial or commercial document.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": null,
+      "enumerations": [
+        {
+          "value": "RADM",
+          "documentationName": "RemittanceAdviceMessage",
+          "documentationDefinition": "Document is a remittance advice sent separately from the current transaction."
+        },
+        {
+          "value": "RPIN",
+          "documentationName": "RelatedPaymentInstruction",
+          "documentationDefinition": "Document is a linked payment instruction to which the current payment instruction is related, for example, in a cover scenario."
+        },
+        {
+          "value": "FXDR",
+          "documentationName": "ForeignExchangeDealReference",
+          "documentationDefinition": "Document is a pre-agreed or pre-arranged foreign exchange transaction to which the payment transaction refers."
+        },
+        {
+          "value": "DISP",
+          "documentationName": "DispatchAdvice",
+          "documentationDefinition": "Document is a dispatch advice."
+        },
+        {
+          "value": "PUOR",
+          "documentationName": "PurchaseOrder",
+          "documentationDefinition": "Document is a purchase order."
+        },
+        {
+          "value": "SCOR",
+          "documentationName": "StructuredCommunicationReference",
+          "documentationDefinition": "Document is a structured communication reference provided by the creditor to identify the referred transaction."
+        }
+      ]
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "DocumentType6Code",
+    "documentationName": "DocumentType6Code",
+    "documentationDefinition": "Specifies a type of financial or commercial document.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": null,
+      "enumerations": [
+        {
+          "value": "MSIN",
+          "documentationName": "MeteredServiceInvoice",
+          "documentationDefinition": "Document is an invoice claiming payment for the supply of metered services, for example gas or electricity supplied to a fixed meter."
+        },
+        {
+          "value": "CNFA",
+          "documentationName": "CreditNoteRelatedToFinancialAdjustment",
+          "documentationDefinition": "Document is a credit note for the final amount settled for a commercial transaction."
+        },
+        {
+          "value": "DNFA",
+          "documentationName": "DebitNoteRelatedToFinancialAdjustment",
+          "documentationDefinition": "Document is a debit note for the final amount settled for a commercial transaction."
+        },
+        {
+          "value": "CINV",
+          "documentationName": "CommercialInvoice",
+          "documentationDefinition": "Document is an invoice."
+        },
+        {
+          "value": "CREN",
+          "documentationName": "CreditNote",
+          "documentationDefinition": "Document is a credit note."
+        },
+        {
+          "value": "DEBN",
+          "documentationName": "DebitNote",
+          "documentationDefinition": "Document is a debit note."
+        },
+        {
+          "value": "HIRI",
+          "documentationName": "HireInvoice",
+          "documentationDefinition": "Document is an invoice for the hiring of human resources or renting goods or equipment."
+        },
+        {
+          "value": "SBIN",
+          "documentationName": "SelfBilledInvoice",
+          "documentationDefinition": "Document is an invoice issued by the debtor."
+        },
+        {
+          "value": "CMCN",
+          "documentationName": "CommercialContract",
+          "documentationDefinition": "Document is an agreement between the parties, stipulating the terms and conditions of the delivery of goods or services."
+        },
+        {
+          "value": "SOAC",
+          "documentationName": "StatementOfAccount",
+          "documentationDefinition": "Document is a statement of the transactions posted to the debtor's account at the supplier."
+        },
+        {
+          "value": "DISP",
+          "documentationName": "DispatchAdvice",
+          "documentationDefinition": "Document is a dispatch advice."
+        },
+        {
+          "value": "BOLD",
+          "documentationName": "BillOfLading",
+          "documentationDefinition": "Document is a shipping notice."
+        },
+        {
+          "value": "VCHR",
+          "documentationName": "Voucher",
+          "documentationDefinition": "Document is an electronic payment document."
+        },
+        {
+          "value": "AROI",
+          "documentationName": "AccountReceivableOpenItem",
+          "documentationDefinition": "Document is a payment that applies to a specific source document."
+        },
+        {
+          "value": "TSUT",
+          "documentationName": "TradeServicesUtilityTransaction",
+          "documentationDefinition": "Document is a transaction identifier as assigned by the Trade Services Utility."
+        },
+        {
+          "value": "PUOR",
+          "documentationName": "PurchaseOrder",
+          "documentationDefinition": "Document is a purchase order."
+        }
+      ]
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "ExternalAccountIdentification1Code",
+    "documentationName": "ExternalAccountIdentification1Code",
+    "documentationDefinition": "Specifies the external account identification scheme name code in the format of character string with a maximum length of 4 characters.\r\nThe list of valid codes is an external code list published separately.\r\nExternal code sets can be downloaded from www.iso20022.org.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "4"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "ExternalCashAccountType1Code",
+    "documentationName": "ExternalCashAccountType1Code",
+    "documentationDefinition": "Specifies the nature, or use, of the cash account in the format of character string with a maximum length of 4 characters.\r\nThe list of valid codes is an external code list published separately.\r\nExternal code sets can be downloaded from www.iso20022.org.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "4"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "ExternalCategoryPurpose1Code",
+    "documentationName": "ExternalCategoryPurpose1Code",
+    "documentationDefinition": "Specifies the category purpose, as published in an external category purpose code list.\r\nExternal code sets can be downloaded from www.iso20022.org.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "4"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "ExternalClearingSystemIdentification1Code",
+    "documentationName": "ExternalClearingSystemIdentification1Code",
+    "documentationDefinition": "Specifies the clearing system identification code, as published in an external clearing system identification code list.\r\nExternal code sets can be downloaded from www.iso20022.org.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "5"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "ExternalDiscountAmountType1Code",
+    "documentationName": "ExternalDiscountAmountType1Code",
+    "documentationDefinition": "Specifies the nature, or use, of the amount in the format of character string with a maximum length of 4 characters.\r\nThe list of valid codes is an external code list published separately.\r\nExternal code sets can be downloaded from www.iso20022.org.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "4"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "ExternalDocumentLineType1Code",
+    "documentationName": "ExternalDocumentLineType1Code",
+    "documentationDefinition": "Specifies the document line type as published in an external document type code list.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "4"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "ExternalGarnishmentType1Code",
+    "documentationName": "ExternalGarnishmentType1Code",
+    "documentationDefinition": "Specifies the garnishment type as published in an external document type code list.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "4"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "ExternalLocalInstrument1Code",
+    "documentationName": "ExternalLocalInstrument1Code",
+    "documentationDefinition": "Specifies the external local instrument code in the format of character string with a maximum length of 35 characters.\r\nThe list of valid codes is an external code list published separately.\r\nExternal code sets can be downloaded from www.iso20022.org.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "35"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "ExternalOrganisationIdentification1Code",
+    "documentationName": "ExternalOrganisationIdentification1Code",
+    "documentationDefinition": "Specifies the external organisation identification scheme name code in the format of character string with a maximum length of 4 characters.\r\nThe list of valid codes is an external code list published separately.\r\nExternal code sets can be downloaded from www.iso20022.org.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "4"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "ExternalPersonIdentification1Code",
+    "documentationName": "ExternalPersonIdentification1Code",
+    "documentationDefinition": "Specifies the external person identification scheme name code in the format of character string with a maximum length of 4 characters.\r\nThe list of valid codes is an external code list published separately.\r\nExternal code sets can be downloaded from www.iso20022.org.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "4"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "ExternalProxyAccountType1Code",
+    "documentationName": "ExternalProxyAccountType1Code",
+    "documentationDefinition": "Specifies the external proxy account type code, as published in the proxy account type external code set.\r\nExternal code sets can be downloaded from www.iso20022.org.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "4"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "ExternalPurpose1Code",
+    "documentationName": "ExternalPurpose1Code",
+    "documentationDefinition": "Specifies the external purpose code in the format of character string with a maximum length of 4 characters.\r\nThe list of valid codes is an external code list published separately.\r\nExternal code sets can be downloaded from www.iso20022.org.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "4"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "ExternalServiceLevel1Code",
+    "documentationName": "ExternalServiceLevel1Code",
+    "documentationDefinition": "Specifies the external service level code in the format of character string with a maximum length of 4 characters.\r\nThe list of valid codes is an external code list published separately.\r\nExternal code sets can be downloaded from www.iso20022.org.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "4"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "ExternalTaxAmountType1Code",
+    "documentationName": "ExternalTaxAmountType1Code",
+    "documentationDefinition": "Specifies the nature, or use, of the amount in the format of character string with a maximum length of 4 characters.\r\nThe list of valid codes is an external code list published separately.\r\nExternal code sets can be downloaded from www.iso20022.org.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "minLength": "1",
+        "maxLength": "4"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "IBAN2007Identifier",
+    "documentationName": "IBAN2007Identifier",
+    "documentationDefinition": "The International Bank Account Number is a code used internationally by financial institutions to uniquely identify the account of a customer at a financial institution as described in the 2007 edition of the ISO 13616 standard \"Banking and related financial services - International Bank Account Number (IBAN)\" and replaced by the more recent edition of the standard.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "pattern": "[A-Z]{2,2}[0-9]{2,2}[a-zA-Z0-9]{1,30}"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "ISODate",
+    "documentationName": "ISODate",
+    "documentationDefinition": "A particular point in the progression of time in a calendar year expressed in the YYYY-MM-DD format. This representation is defined in \"XML Schema Part 2: Datatypes Second Edition - W3C Recommendation 28 October 2004\" which is aligned with ISO 8601.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:date",
+      "facets": null,
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "Instruction3Code",
+    "documentationName": "Instruction3Code",
+    "documentationDefinition": "Specifies further instructions concerning the processing of a payment instruction, provided by the sending clearing agent to the next agent(s).",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": null,
+      "enumerations": [
+        {
+          "value": "CHQB",
+          "documentationName": "PayCreditorByCheque",
+          "documentationDefinition": "(Ultimate) creditor must be paid by cheque."
+        },
+        {
+          "value": "HOLD",
+          "documentationName": "HoldCashForCreditor",
+          "documentationDefinition": "Amount of money must be held for the (ultimate) creditor, who will call. Pay on identification."
+        },
+        {
+          "value": "PHOB",
+          "documentationName": "PhoneBeneficiary",
+          "documentationDefinition": "Please advise/contact (ultimate) creditor/claimant by phone."
+        },
+        {
+          "value": "TELB",
+          "documentationName": "Telecom",
+          "documentationDefinition": "Please advise/contact (ultimate) creditor/claimant by the most efficient means of telecommunication."
+        }
+      ]
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "LEIIdentifier",
+    "documentationName": "LEIIdentifier",
+    "documentationDefinition": "Legal Entity Identifier is a code allocated to a party as described in ISO 17442 \"Financial Services - Legal Entity Identifier (LEI)\".",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "pattern": "[A-Z0-9]{18,18}[0-9]{2,2}"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "Max15NumericText_fixed",
+    "documentationName": "Max15NumericText_fixed",
+    "documentationDefinition": "",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": null,
+      "enumerations": [
+        {
+          "value": "1",
+          "documentationName": "1",
+          "documentationDefinition": ""
+        }
+      ]
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "Number",
+    "documentationName": "Number",
+    "documentationDefinition": "Number of objects represented as an integer.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:decimal",
+      "facets": {
+        "totalDigits": "18",
+        "fractionDigits": "0"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "PercentageRate",
+    "documentationName": "PercentageRate",
+    "documentationDefinition": "Rate expressed as a percentage, that is, in hundredths, for example, 0.7 is 7/10 of a percent, and 7.0 is 7%.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:decimal",
+      "facets": {
+        "totalDigits": "11",
+        "fractionDigits": "10"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "Priority2Code",
+    "documentationName": "Priority2Code",
+    "documentationDefinition": "Specifies the priority level of an event.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": null,
+      "enumerations": [
+        {
+          "value": "HIGH",
+          "documentationName": "High",
+          "documentationDefinition": "Priority level is high."
+        },
+        {
+          "value": "NORM",
+          "documentationName": "Normal",
+          "documentationDefinition": "Priority level is normal."
+        }
+      ]
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "Priority3Code",
+    "documentationName": "Priority3Code",
+    "documentationDefinition": "Specifies the priority level of an event.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": null,
+      "enumerations": [
+        {
+          "value": "URGT",
+          "documentationName": "Urgent",
+          "documentationDefinition": "Priority level is urgent (highest priority possible)."
+        },
+        {
+          "value": "HIGH",
+          "documentationName": "High",
+          "documentationDefinition": "Priority level is high."
+        },
+        {
+          "value": "NORM",
+          "documentationName": "Normal",
+          "documentationDefinition": "Priority level is normal."
+        }
+      ]
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "RegulatoryReportingType1Code",
+    "documentationName": "RegulatoryReportingType1Code",
+    "documentationDefinition": "Identifies whether the regulatory reporting information applies to the debit side, to the credit side or to both debit and credit sides of the transaction.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": null,
+      "enumerations": [
+        {
+          "value": "CRED",
+          "documentationName": "Credit",
+          "documentationDefinition": "Regulatory information applies to the credit side."
+        },
+        {
+          "value": "DEBT",
+          "documentationName": "Debit",
+          "documentationDefinition": "Regulatory information applies to the debit side."
+        },
+        {
+          "value": "BOTH",
+          "documentationName": "Both",
+          "documentationDefinition": "Regulatory information applies to both credit and debit sides."
+        }
+      ]
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "RemittanceLocationMethod2Code",
+    "documentationName": "RemittanceLocationMethod2Code",
+    "documentationDefinition": "Specifies the method used to deliver the remittance advice information.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": null,
+      "enumerations": [
+        {
+          "value": "FAXI",
+          "documentationName": "Fax",
+          "documentationDefinition": "Remittance advice information must be faxed."
+        },
+        {
+          "value": "EDIC",
+          "documentationName": "ElectronicDataInterchange",
+          "documentationDefinition": "Remittance advice information must be sent through Electronic Data Interchange (EDI)."
+        },
+        {
+          "value": "URID",
+          "documentationName": "UniformResourceIdentifier",
+          "documentationDefinition": "Remittance advice information needs to be sent to a Uniform Resource Identifier (URI). URI is a compact string of characters that uniquely identify an abstract or physical resource. URI's are the super-set of identifiers, such as URLs, email addresses, ftp sites, etc, and as such, provide the syntax for all of the identification schemes."
+        },
+        {
+          "value": "EMAL",
+          "documentationName": "EMail",
+          "documentationDefinition": "Remittance advice information must be sent through e-mail."
+        },
+        {
+          "value": "POST",
+          "documentationName": "Post",
+          "documentationDefinition": "Remittance advice information must be sent through postal services."
+        },
+        {
+          "value": "SMSM",
+          "documentationName": "SMS",
+          "documentationDefinition": "Remittance advice information must be sent through by phone as a short message service (SMS)."
+        }
+      ]
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "SettlementMethod1Code__1",
+    "documentationName": "SettlementMethod1Code__1",
+    "documentationDefinition": "Specifies the method used to settle the credit transfer instruction.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": null,
+      "enumerations": [
+        {
+          "value": "INDA",
+          "documentationName": "InstructedAgent",
+          "documentationDefinition": "Settlement is done by the agent instructed to execute a payment instruction."
+        },
+        {
+          "value": "INGA",
+          "documentationName": "InstructingAgent",
+          "documentationDefinition": "Settlement is done by the agent instructing and forwarding the payment to the next party in the payment chain."
+        },
+        {
+          "value": "COVE",
+          "documentationName": "CoverMethod",
+          "documentationDefinition": "Settlement is done through a cover payment."
+        }
+      ]
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "TaxRecordPeriod1Code",
+    "documentationName": "TaxRecordPeriod1Code",
+    "documentationDefinition": "Specifies the period related to the tax payment.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": null,
+      "enumerations": [
+        {
+          "value": "MM01",
+          "documentationName": "FirstMonth",
+          "documentationDefinition": "Tax is related to the second month of the period."
+        },
+        {
+          "value": "MM02",
+          "documentationName": "SecondMonth",
+          "documentationDefinition": "Tax is related to the first month of the period."
+        },
+        {
+          "value": "MM03",
+          "documentationName": "ThirdMonth",
+          "documentationDefinition": "Tax is related to the third month of the period."
+        },
+        {
+          "value": "MM04",
+          "documentationName": "FourthMonth",
+          "documentationDefinition": "Tax is related to the fourth month of the period."
+        },
+        {
+          "value": "MM05",
+          "documentationName": "FifthMonth",
+          "documentationDefinition": "Tax is related to the fifth month of the period."
+        },
+        {
+          "value": "MM06",
+          "documentationName": "SixthMonth",
+          "documentationDefinition": "Tax is related to the sixth month of the period."
+        },
+        {
+          "value": "MM07",
+          "documentationName": "SeventhMonth",
+          "documentationDefinition": "Tax is related to the seventh month of the period."
+        },
+        {
+          "value": "MM08",
+          "documentationName": "EighthMonth",
+          "documentationDefinition": "Tax is related to the eighth month of the period."
+        },
+        {
+          "value": "MM09",
+          "documentationName": "NinthMonth",
+          "documentationDefinition": "Tax is related to the ninth month of the period."
+        },
+        {
+          "value": "MM10",
+          "documentationName": "TenthMonth",
+          "documentationDefinition": "Tax is related to the tenth month of the period."
+        },
+        {
+          "value": "MM11",
+          "documentationName": "EleventhMonth",
+          "documentationDefinition": "Tax is related to the eleventh month of the period."
+        },
+        {
+          "value": "MM12",
+          "documentationName": "TwelfthMonth",
+          "documentationDefinition": "Tax is related to the twelfth month of the period."
+        },
+        {
+          "value": "QTR1",
+          "documentationName": "FirstQuarter",
+          "documentationDefinition": "Tax is related to the first quarter of the period."
+        },
+        {
+          "value": "QTR2",
+          "documentationName": "SecondQuarter",
+          "documentationDefinition": "Tax is related to the second quarter of the period."
+        },
+        {
+          "value": "QTR3",
+          "documentationName": "ThirdQuarter",
+          "documentationDefinition": "Tax is related to the third quarter of the period."
+        },
+        {
+          "value": "QTR4",
+          "documentationName": "FourthQuarter",
+          "documentationDefinition": "Tax is related to the forth quarter of the period."
+        },
+        {
+          "value": "HLF1",
+          "documentationName": "FirstHalf",
+          "documentationDefinition": "Tax is related to the first half of the period."
+        },
+        {
+          "value": "HLF2",
+          "documentationName": "SecondHalf",
+          "documentationDefinition": "Tax is related to the second half of the period."
+        }
+      ]
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "TrueFalseIndicator",
+    "documentationName": "TrueFalseIndicator",
+    "documentationDefinition": "A flag indicating a True or False value.",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:boolean",
+      "facets": null,
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  },
+  {
+    "name": "UUIDv4Identifier",
+    "documentationName": "UUIDv4Identifier",
+    "documentationDefinition": "Universally Unique IDentifier (UUID) version 4, as described in IETC RFC 4122 \"Universally Unique IDentifier (UUID) URN Namespace\".",
+    "definitionType": "restriction",
+    "restriction": {
+      "base": "xs:string",
+      "facets": {
+        "pattern": "[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}"
+      },
+      "enumerations": null
+    },
+    "list": null,
+    "union": null
+  }
+]
